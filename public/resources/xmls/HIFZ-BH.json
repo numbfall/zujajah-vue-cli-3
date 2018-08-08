@@ -1,0 +1,967 @@
+{
+    "Course": {
+      "Title": "Hifz - by Asma Huda",
+      "Keyword": "HIFZ-BH",
+      "Language": "eng",
+      "Topic": [
+        {
+          "Title": "Surah Al-Mulk",
+          "Order": "0",
+          "Lesson": [{
+            "Title": "Surah Al-Mulk",
+            "Order": "0",
+            "Resource": [
+              {
+                "Title": "L01 Ayah 1-3",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L01_Ayah_1-3.mp3",
+                "Duration": "00:24:34",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L02 Ayah 4-5",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L02_Ayah_4-5.mp3",
+                "Duration": "00:17:50",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L03 Ayah 6-8",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L03_Ayah_6-8.mp3",
+                "Duration": "00:27:05",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L04 Ayah 9-11",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L04_Ayah_9-11.mp3",
+                "Duration": "00:36:36",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L05 Ayah 12",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L05_Ayah_12.mp3",
+                "Duration": "00:25:11",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L06 Ayah 13-15",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L06_Ayah_13-15.mp3",
+                "Duration": "00:26:21",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L07 Ayah 16-17",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L07_Ayah_16-17.mp3",
+                "Duration": "00:23:27",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L08 Ayah 18-19",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L08_Ayah_18-19.mp3",
+                "Duration": "00:29:36",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L09 Ayah 20-21",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L09_Ayah_20-21.mp3",
+                "Duration": "00:20:30",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L10 Ayah 22",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L10_Ayah_22.mp3",
+                "Duration": "00:18:35",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L11 Ayah 23-26",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L11_Ayah_23-26.mp3",
+                "Duration": "00:18:46",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L12 Ayah 27",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L12_Ayah_27.mp3",
+                "Duration": "00:13:09",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L13 Ayah 28",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L13_Ayah_28.mp3",
+                "Duration": "00:09:12",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "L14 Ayah 29-30",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Al-Mulk_AH/Hifz2007_Al-Mulk-L14_Ayah_29-30.mp3",
+                "Duration": "00:22:47",
+                "udate": "2016-01-01"
+              }
+            ]
+          }]
+        },
+        {
+          "Title": "Para 30",
+          "Order": "0",
+          "Lesson": [{
+            "Title": "Para 30",
+            "Order": "0",
+            "Resource": [
+              {
+                "ID": "0",
+                "Title": "Surah# 78: An-Naba' النبا ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-078 An-Naba'.mp3",
+                "Duration": "00:28:51"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 79: An-Nazi'at النازعات ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-079 An-Nazi'at.mp3",
+                "Duration": "00:33:49"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 80: 'Abasa عبس ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-080 'Abasa.mp3",
+                "Duration": "00:13:04"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 81: At-Takwir التکویر ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-081 At-Takwir.mp3",
+                "Duration": "00:11:37"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 82: Al-Infitar الإنفطار ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-082 Al-Infitar.mp3",
+                "Duration": "00:10:18"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 83: Al-Mutaffifin المطففین ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-083 Al-Mutaffifin.mp3",
+                "Duration": "00:19:19"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 84: Al-Inshiqaq الإنشقاق ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-084 Al-Inshiqaq.mp3",
+                "Duration": "00:10:33"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 85: Al-Buruj البروج ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-085 Al-Buruj.mp3",
+                "Duration": "00:11:57"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 86: At-Tariq الطارق ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-086 At-Tariq.mp3",
+                "Duration": "00:06:28"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 87: Al-A'la الأعلیٰ ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-087 Al-A'la.mp3",
+                "Duration": "00:06:40"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 88: Al-Ghashiyah الغاشیۃ ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-088 Al-Ghashiyah.mp3",
+                "Duration": "00:11:16"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 89: Al-Fajr الفجر ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-089 Al-Fajr.mp3",
+                "Duration": "00:14:28"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 90: Al-Balad البلد ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-090 Al-Balad.mp3",
+                "Duration": "00:08:12"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 91: Ash-Shams الشمس ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-091 Ash-Shams.mp3",
+                "Duration": "00:06:15"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 92: Al-Lail اللیل ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-092 Al-Lail.mp3",
+                "Duration": "00:09:40"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 93: Ad-Duha الضحٰی ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-093 Ad-Duha.mp3",
+                "Duration": "00:06:17"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 94: Ash-Sharh الشرح ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-094 Ash-Sharh.mp3",
+                "Duration": "00:03:18"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 95: At-Tin التین ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-095 At-Tin.mp3",
+                "Duration": "00:04:58"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 96: Al-'Alaq العلق ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-096 Al-'Alaq.mp3",
+                "Duration": "00:07:40"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 97: Al-Qadr القدر ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-097 Al-Qadr.mp3",
+                "Duration": "00:05:11"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 98: Al-Baiyinah البـیـنۃ ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-098 Al-Baiyinah.mp3",
+                "Duration": "00:10:13"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 99: Az-Zalzalah الزلزلة ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-099 Az-Zalzalah.mp3",
+                "Duration": "00:04:22"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 100: Al-'Adiyat العادیات ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-100 Al-'Adiyat.mp3",
+                "Duration": "00:04:21"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 101: Al-Qari'ah القارعۃ ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-101 Al-Qari'ah.mp3",
+                "Duration": "00:04:46"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 102: At-Takathur التکاثر ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-102 At-Takathur.mp3",
+                "Duration": "00:03:44"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 103: Al-'Asr العصر ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-103 Al-'Asr.mp3",
+                "Duration": "00:02:34"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 104: Al-Humazah الھمزۃ ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-104 Al-Humazah.mp3",
+                "Duration": "00:04:39"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 105: Al-Fil الفیل ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-105 Al-Fil.mp3",
+                "Duration": "00:02:23"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 106: Quraish قریش ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-106 Quraish.mp3",
+                "Duration": "00:02:19"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 107: Al-Ma'un الماعون ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-107 Al-Ma'un.mp3",
+                "Duration": "00:03:21"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 108: Al-Kauthar الکوثر ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-108 Al-Kauthar.mp3",
+                "Duration": "00:01:28"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 109: Al-Kafirun الکافرون ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-109 Al-Kafirun.mp3",
+                "Duration": "00:03:04"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 110: An-Nasr النصر ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-110 An-Nasr.mp3",
+                "Duration": "00:02:54"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 111: Al-Masad المسد ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-111 Al-Masad.mp3",
+                "Duration": "00:02:45"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 112: Al-Ikhlas الإخلاص ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-112 Al-Ikhlas.mp3",
+                "Duration": "00:01:25"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 113: Al-Falaq الفلق ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-113 Al-Falaq.mp3",
+                "Duration": "00:03:10"
+              },
+              {
+                "ID": "0",
+                "Title": "Surah# 114: An-Nas الناس ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Resources/Hifz/Asma Huda/Para30/HIFZ-AH-P30-114 An-Nas.mp3",
+                "Duration": "00:05:31"
+              }
+            ]
+          }]
+        },
+        {
+          "Title": "Parah 30 (2007)",
+          "Order": "0",
+          "Lesson": [{
+            "Title": "Parah 30 (2007)",
+            "Order": "0",
+            "Resource": [
+              {
+                "Title": "01 Al-Naba' 1-11",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-01_Al-Naba_1-11.mp3",
+                "Duration": "00:55:16",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "02 Al-Naba' 12-17",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-02_Al-Naba_12-17.mp3",
+                "Duration": "00:41:37",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "03 Al-Naba' 18-23",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-03_Al-Naba_18-23.mp3",
+                "Duration": "00:26:03",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "04 Al-Naba' 24-30",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-04_Al-Naba_24-30.mp3",
+                "Duration": "00:34:03",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "05 Al-Naba' 31-37",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-05_Al-Naba_31-37.mp3",
+                "Duration": "00:24:06",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "06 Al-Naba' 38-40",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-06_Al-Naba_38-40.mp3",
+                "Duration": "00:37:55",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "07 Al-Nazi'aat 1-10",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-07_Al-Naziaat_1-10.mp3",
+                "Duration": "00:32:45",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "08 Al-Nazi'aat 11-17",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-08_Al-Naziaat_11-17.mp3",
+                "Duration": "00:41:18",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "09 Al-Nazi'aat 18-26",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-09_Al-Naziaat_18-26.mp3",
+                "Duration": "00:49:34",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "10 Al-Nazi'aat 27-33",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-10_Al-Naziaat_27-33.mp3",
+                "Duration": "00:42:20",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "11 Al-Nazi'aat 34-40",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-11_Al-Naziaat_34-40.mp3",
+                "Duration": "00:52:32",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "12 Al-Nazi'aat 41-46",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-12_Al-Naziaat_41-46.mp3",
+                "Duration": "00:52:48",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "13 'Abasa 1-10",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-13_Abasa_1-10.mp3",
+                "Duration": "00:55:36",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "14 'Abasa 11-20",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-14_Abasa_11-20.mp3",
+                "Duration": "00:54:52",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "15 'Abasa 21-28",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-15_Abasa_21-28.mp3",
+                "Duration": "00:54:02",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "16 'Abasa 29-37",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-16_Abasa_29-37.mp3",
+                "Duration": "00:52:49",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "17 'Abasa 38-42",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-17_Abasa_38-42.mp3",
+                "Duration": "00:24:48",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "18 Al-Takwir 1-9",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-18_Al-Takwir_1-9.mp3",
+                "Duration": "01:01:59",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "19 Al-Takwir 10-19",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-19_Al-Takwir_10-19.mp3",
+                "Duration": "00:46:06",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "20 Al-Takwir 20-29",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-20_Al-Takwir_20-29.mp3",
+                "Duration": "01:13:19",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "21 Al-Infitar 1-9",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-21_Al-Infitar_1-9.mp3",
+                "Duration": "00:56:55",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "22 Al-Infitar 10-18",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-22_Al-Infitar_10-18.mp3",
+                "Duration": "00:50:56",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "23 Al-Infitar 19 - Al-Mutaffifin 1-6",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-23_Al-Infitar_19_-_Al-Mutaffifin_1-6.mp3",
+                "Duration": "00:49:07",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "24 Al-Mutaffifin 7-14",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-24_Al-Mutaffifin_7-14.mp3",
+                "Duration": "00:49:41",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "25 Al-Mutaffifin 15-23",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-25_Al-Mutaffifin_15-23.mp3",
+                "Duration": "00:53:59",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "26 Al-Mutaffifin 24-30",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-26_Al-Mutaffifin_24-30.mp3",
+                "Duration": "00:45:17",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "27 Al-Mutaffifin 31-36",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-27_Al-Mutaffifin_31-36.mp3",
+                "Duration": "00:50:42",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "28 Al-Inshiqaq 1-6",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-28_Al-Inshiqaq_1-6.mp3",
+                "Duration": "00:44:35",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "29 Al-Inshiqaq 7-10",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-29_Al-Inshiqaq_7-10.mp3",
+                "Duration": "00:24:13",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "30 Al-Inshiqaq 10-13",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-30_Al-Inshiqaq_10-13.mp3",
+                "Duration": "00:15:17",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "31 Al-Inshiqaq 14-21",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-31_Al-Inshiqaq_14-21.mp3",
+                "Duration": "00:45:13",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "32 Al-Inshiqaq 22-25",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-32_Al-Inshiqaq_22-25.mp3",
+                "Duration": "00:34:27",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "33 Al-Buruj 1-8",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-33_Al-Buruj_1-8.mp3",
+                "Duration": "00:45:29",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "34 Al-Buruj 9-11",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-34_Al-Buruj_9-11.mp3",
+                "Duration": "00:39:57",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "35 Al-Buruj 12-22",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-35_Al-Buruj_12-22.mp3",
+                "Duration": "00:47:47",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "36 Al-Tariq 1-7",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-36_Al-Tariq_1-7.mp3",
+                "Duration": "00:30:08",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "37 Al-Tariq 8-17",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-37_Al-Tariq_8-17.mp3",
+                "Duration": "00:21:54",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "38 Al-A'la 1-10",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-38_Al-Ala_1-10.mp3",
+                "Duration": "00:46:43",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "39 Al-A'la 11-19",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-39_Al-Ala_11-19.mp3",
+                "Duration": "00:42:02",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "40 Al-Ghashiyah 1-7",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-40_Al-Ghashiyah_1-7.mp3",
+                "Duration": "00:35:14",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "41 Al-Ghashiyah 8-16",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-41_Al-Ghashiyah_8-16.mp3",
+                "Duration": "00:28:12",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "42 Al-Ghashiyah 17-22",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-42_Al-Ghashiyah_17-22.mp3",
+                "Duration": "00:27:36",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "43 Al-Ghashiyah 23-26 - Al-Fajr 1-5",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-43_Al-Ghashiyah_23-26_-_Al-Fajr_1-5.mp3",
+                "Duration": "00:25:56",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "44 Al-Fajr 6-14",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-44_Al-Fajr_6-14.mp3",
+                "Duration": "00:45:30",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "45 Al-Fajr 15-18",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-45_Al-Fajr_15-18.mp3",
+                "Duration": "00:40:10",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "46 Al-Fajr 19-23",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-46_Al-Fajr_19-23.mp3",
+                "Duration": "00:41:06",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "47 Al-Fajr 24-30",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-47_Al-Fajr_24-30.mp3",
+                "Duration": "00:52:15",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "48 Al-Balad 1-9",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-48_Al-Balad_1-9.mp3",
+                "Duration": "00:42:21",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "49 Al-Balad 10-18",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-49_Al-Balad_10-18.mp3",
+                "Duration": "00:36:30",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "50 Al-Balad 19-20 - Al-Shams 1-8",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-50_Al-Balad_19-20_-_Al-Shams_1-8.mp3",
+                "Duration": "00:38:05",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "51 Al-Shams 9-15",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-51_Al-Shams_9-15.mp3",
+                "Duration": "00:39:49",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "52 Al-Lail 1-13",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-52_Al-Lail_1-13.mp3",
+                "Duration": "00:44:14",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "53 Al-Lail 14-21 - Al-Duha 1-4",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-53_Al-Lail_14-21_-_Al-Duha_1-4.mp3",
+                "Duration": "00:47:00",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "54 Al-Duha 5-11 - Al-Sharh",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-54_Al-Duha_5-11_-_Al-Sharh.mp3",
+                "Duration": "00:50:54",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "55 Al-Tin - Al-'Alaq 1-5",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-55_Al-Tin_-_Al-Alaq_1-5.mp3",
+                "Duration": "00:48:12",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "56 Al-'Alaq 6-19",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-56_Al-Alaq_6-19.mp3",
+                "Duration": "00:39:06",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "57 Al-Qadr - Al-Bayyinah 1-4",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-57_Al-Qadr_-_Al-Bayyinah_1-4.mp3",
+                "Duration": "00:43:58",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "58 Al-Bayyinah 5-8",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-58_Al-Bayyinah_5-8.mp3",
+                "Duration": "00:38:38",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "59 Al-Zilzal - Al-'Aadiyaat 1-7",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-59_Al-Zilzal_-_Al-Aadiyaat_1-7.mp3",
+                "Duration": "00:52:32",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "60 Al-'Aadiyaat 8-11 - Al-Qari'ah",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-60_Al-Aadiyaat_8-11_-_Al-Qariah.mp3",
+                "Duration": "00:50:22",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "61 Al-Takathur - Al-Humazah",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-61_Al-Takathur_-_Al-Humazah.mp3",
+                "Duration": "00:57:58",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "62 Al-Fil - Quraish",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-62_Al-Fil_-_Quraish.mp3",
+                "Duration": "00:37:02",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "63 Al-Ma'un - Al-Kafirun",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-63_Al-Maun_-_Al-Kafirun.mp3",
+                "Duration": "00:46:39",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "64 Al-Nasr - Al-Lahab",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-64_Al-Nasr_-_Al-Lahab.mp3",
+                "Duration": "00:47:39",
+                "udate": "2016-01-01"
+              },
+              {
+                "Title": "65 Al-Ikhlas - Al-Naas",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Al-Quran/Hifz/Parah30_AH/Hifz2007-P30-65_Al-Ikhlas_-_Al-Naas.mp3",
+                "Duration": "00:48:54",
+                "udate": "2016-01-01"
+              }
+            ]
+          }]
+        }
+      ]
+    }
+  }

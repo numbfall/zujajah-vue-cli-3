@@ -1,0 +1,80 @@
+{
+    "Course": {
+      "Title": "QabrKayTeenSawal",
+      "Keyword": "QabrKayTeenSawal",
+      "Language": "eng",
+      "Description": "~w_desc=61~w_txt1=14~w_durn=13~w_lnks=12~t_desc=Topic~t_txt1=Page~t_durn=Length~t_lnks=Click~",
+      "Topic": [{
+        "Title": "Islamabad 2015",
+        "Order": "0",
+        "Lesson": [
+          {
+            "Title": "Urdu",
+            "Order": "0",
+            "Resource": [
+              {
+                "Title": " مقصد حیات - غیر مومن کی موت کا منظر ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Aqeedah/Qabr_K_Teen_Sawal_Isl/Qabr_K_Sawal-Isl15-01-Maqsad_e_Hayat_-_Ghair_Momin_Ki_Mawt_Ka_Manzar_Page_1-24_30-04-2015.mp3",
+                "Duration": "00:53:42",
+                "udate": "2018-02-08",
+                "Txt1": "Page 1-24"
+              },
+              {
+                "Title": " غیر مومن کی موت کا منظر - اللہ تعالی کا جواب ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Aqeedah/Qabr_K_Teen_Sawal_Isl/Qabr_K_Sawal-Isl15-02-Ghair_Momin_Ki_Mawt_Ka_Manzar_-_Allah_Taala_Ka_Jawab_Page_24-42_01-05-2015.mp3",
+                "Duration": "00:49:25",
+                "udate": "2018-02-08",
+                "Txt1": "Page 24-42"
+              },
+              {
+                "Title": " قبر کی نعمتیں - اچھی موت کے حصول کی دعائیں ",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Aqeedah/Qabr_K_Teen_Sawal_Isl/Qabr_K_Sawal-Isl15-03-Qabr_Ki_Nimatain_-_Achhi_Mawt_Kay_Husool_Ki_Duaain_Page_43-70_02-05-2015.mp3",
+                "Duration": "00:54:40",
+                "udate": "2018-02-08",
+                "Txt1": "Page 43-70"
+              }
+            ]
+          },
+          {
+            "Title": "Roman English",
+            "Order": "0",
+            "Resource": [
+              {
+                "Title": "Maqsad e Hayat - Ghair Mo'min Ki Mawt Ka Manzar",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Aqeedah/Qabr_K_Teen_Sawal_Isl/Qabr_K_Sawal-Isl15-01-Maqsad_e_Hayat_-_Ghair_Momin_Ki_Mawt_Ka_Manzar_Page_1-24_30-04-2015.mp3",
+                "Duration": "00:53:42",
+                "udate": "2018-02-08",
+                "Txt1": "Page 1-24"
+              },
+              {
+                "Title": "Ghair Mo'min Ki Mawt Ka Manzar - Allah Ta'ala Ka Jawab",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Aqeedah/Qabr_K_Teen_Sawal_Isl/Qabr_K_Sawal-Isl15-02-Ghair_Momin_Ki_Mawt_Ka_Manzar_-_Allah_Taala_Ka_Jawab_Page_24-42_01-05-2015.mp3",
+                "Duration": "00:49:25",
+                "udate": "2018-02-08",
+                "Txt1": "Page 24-42"
+              },
+              {
+                "Title": "Qabr Ki Ni'matain - Achhi Mawt Kay Husool Ki Du'aain",
+                "Order": "0",
+                "Size": "0",
+                "DownloadLocation": "Media/Aqeedah/Qabr_K_Teen_Sawal_Isl/Qabr_K_Sawal-Isl15-03-Qabr_Ki_Nimatain_-_Achhi_Mawt_Kay_Husool_Ki_Duaain_Page_43-70_02-05-2015.mp3",
+                "Duration": "00:54:40",
+                "udate": "2018-02-08",
+                "Txt1": "Page 43-70"
+              }
+            ]
+          }
+        ]
+      }]
+    }
+  }
