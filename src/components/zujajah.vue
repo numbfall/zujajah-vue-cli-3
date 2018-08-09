@@ -53,7 +53,7 @@
                     <i class="dropdown icon"></i>{{les.Title}}</div>
                   <div class="content">
                     <div class="ui divided list selection">
-                      <div class="item" v-for="(res, index) in les.Resource" :key="index" v-on:click="loadAudio(res.DownloadLocation)">
+                      <div class="item" v-for="(res, index) in les.Resource" :key="index" v-on:click="loadAudio(res.DownloadLocation, res.Title)">
                         <i class="play large middle aligned icon"></i>
                         <div class="content">
                           <div class="header">{{res.Title}}</div>
@@ -72,21 +72,19 @@
             <div class="ui active inverted dimmer">
               <div class="ui medium text loader">Loading Files</div>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <br><br><br><br><br><br><br>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="ui grid">
-    <div class="ten wide column">
-      <audio controls>
+  <div v-show="resource != ''" class="">
+    <div class="">
+      <a class="" :href="resource" :download="download" target=”_blank”><i class="download icon"></i></a>
+      <div class="">{{current}}</div>
+    </div>
+    <div class="">
+      <audio class="" controls>
         <source :src="resource">
       </audio>
     </div>
@@ -109,6 +107,7 @@ export default {
       category: [],
       courses: [],
       selected: '',
+      current: '',
       course: [],
       resource: '',
       loader: false,
@@ -127,8 +126,9 @@ export default {
   },
 
   methods: {
-    loadAudio: function (res) {
+    loadAudio: function (res, ttl) {
       this.resource = 'http://alhudamedia.com/' + res
+      this.current = ttl
     },
     getCourse: function (val) {
       this.courses = []
@@ -154,6 +154,18 @@ export default {
       $('audio')[0].load(url)
       $('audio')[0].play()
     }
+  },
+
+  computed: {
+    download: function () {
+        return this.current.toString().toLowerCase()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/[^\w-]+/g, '')        // Remove all non-word chars
+        .replace(/--+/g, '-')           // Replace multiple - with single -
+        .replace(/^-+/, '')             // Trim - from start of text
+        .replace(/-+$/, '')             // Trim - from end of text
+        .concat('.mp3');                // Add mp3 to the end
+    } 
   }
 }
 </script>
@@ -173,13 +185,6 @@ a {
   max-width: 950px;
   margin: 0 auto;
   text-align: left;
-}
-
-audio {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  min-width: 30em;
 }
 
 .ui.styled.accordion .accordion .content {
