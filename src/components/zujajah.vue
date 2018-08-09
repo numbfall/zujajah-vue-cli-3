@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="main">
     <div class="ui grid">
       <div class="six wide column">
         <div class="ui vertical menu fluid">
@@ -27,7 +27,7 @@
               <div class="title"><i class="dropdown icon"></i>{{top.Title}}</div>
               <div class="content">
                 <div class="ui accordion styled" v-for="(les, index) in top.Lesson" :key="index">
-                  <div class="title">{{les.Title}}</div>
+                  <div class="title"><i class="dropdown icon"></i>{{les.Title}}</div>
                   <div class="content">
                     <div class="ui relaxed divided list selection">
                       <div class="item" v-for="(res, index) in les.Resource" :key="index" v-on:click="loadAudio(res.DownloadLocation)">
@@ -59,7 +59,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
 import axios from 'axios'
 
 export default {
@@ -92,6 +91,7 @@ export default {
       axios.get('/resources/xmls/' + val + '.json')
         .then(response => {
           this.course = response.data
+          $('.accordion .active').removeClass('active')
         })
         .catch(e => {
           this.errors.push(e)
@@ -122,6 +122,7 @@ a {
 }
 
 .main {
+  padding: 1em;
   max-width: 950px;
   margin: 0 auto;
   text-align: left;
@@ -132,10 +133,6 @@ audio {
   bottom: 0;
   right: 0;
   min-width: 30em;
-}
-
-i.icon.play.large {
-  padding-top: 0.5em;
 }
 
 </style>

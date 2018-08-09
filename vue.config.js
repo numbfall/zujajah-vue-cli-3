@@ -3,6 +3,9 @@ module.exports = {
     chainWebpack: config => {
         config
         .plugin('jquery')
-        .use(webpack.ProvidePlugin, [{ jQuery: 'jquery' } ])  
+        .use(webpack.ProvidePlugin, [{   
+                                        $: "jquery",
+                                        jQuery: "jquery", 
+                                    }])  
     }
 }
