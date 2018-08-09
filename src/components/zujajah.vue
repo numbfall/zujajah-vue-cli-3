@@ -19,11 +19,11 @@
             <div class="">{{current}}</div>
           </div>
           <div class="section">
-            <div class="ui big buttons teal">
-              <div v-on:click="play" class="ui button" id="play-button">
-                <i class="play icon"></i> Play
-              </div>
-            </div>
+            
+              <button v-on:click="play" class="ui button" id="play-button">
+                <i class="play icon"></i>
+              </button>
+            
             <input id="trackProgressBar" v-model="trackProgress" type="range" min="0">
           </div>
           <div class="section">
@@ -141,16 +141,16 @@ export default {
   },
 
   methods: {
-    play: function (event) {
-        if ($('audio')[0].paused) {
-          $(event.target).toggleClass('active')
-          $('audio')[0].oncanplay = $('audio')[0].play()
-        } else {
-          $(event.target).removeClass('active')
-          $('audio')[0].pause()
-        }
+    play: function () {
+      if ($('audio')[0].paused) {
+        $('audio')[0].oncanplay = $('audio')[0].play()
+      } else {
+        $('audio')[0].pause()
+      }
     },
     loadAudio: function (res, ttl) {
+      this.trackDuration = 0
+      this.trackProgress = 0
       this.resource = 'http://alhudamedia.com/' + res
       this.current = ttl
     },
@@ -173,6 +173,13 @@ export default {
     },
     seekTrack: function (val) {
       $('#trackProgressBar').val(val)
+      if (!$('audio')[0].paused) {
+        $('#play-button').find('i').removeClass('play')
+        $('#play-button').find('i').addClass('pause')
+      } else {
+        $('#play-button').find('i').removeClass('pause')
+        $('#play-button').find('i').addClass('play')
+      }
     }
   },
 
@@ -204,10 +211,6 @@ export default {
 <style scoped>
 a {
   color: #42b983;
-}
-
-audio {
-  display: none;
 }
 
 .debug div {
