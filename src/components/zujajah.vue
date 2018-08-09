@@ -67,6 +67,20 @@
             </div>
           </div>
         </div>
+        <div v-show="loader" class="sixteen wide column">
+          <div class="ui segment">
+            <div class="ui active inverted dimmer">
+              <div class="ui medium text loader">Loading Files</div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -97,6 +111,7 @@ export default {
       selected: '',
       course: [],
       resource: '',
+      loader: false,
       errors: []
     }
   },
@@ -116,10 +131,13 @@ export default {
       this.resource = 'http://alhudamedia.com/' + res
     },
     getCourse: function (val) {
+      this.courses = []
+      this.loader = true
       axios.get('/resources/xmls/' + val + '.json')
         .then(response => {
           this.course = response.data
           $('.accordion .active').removeClass('active')
+          this.loader = false
         })
         .catch(e => {
           this.errors.push(e)
