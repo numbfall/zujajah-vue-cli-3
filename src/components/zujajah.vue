@@ -1,40 +1,59 @@
 <template>
   <div class="main">
-    <div class="ui grid">
-      <div class="six wide column">
-        <div class="ui vertical menu fluid">
-          <div class="item"><strong>Categories</strong></div>
-          <div class="ui left pointing dropdown link item" v-dropdown v-for="(cat, index) in category.Categories" :key="index">
-            {{cat.Title}}<i class="dropdown icon"></i>
+    <div class="ui stackable grid">
+      <div class="four wide column">
+        <div class="ui vertical menu">
+          <div class="item" v-for="(cat, index) in category.Categories" :key="index">
+            <div class="header">{{cat.Title}}</div>
             <div class="menu">
-                <div class="item" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</div>
+                <div class="item link" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="ten wide column">
-        <div class="ui vertical menu fluid">
-          <div class="item"><div v-show="courses.length == 0" class="ui red horizontal label">Select a category</div><strong>Courses</strong></div>
-          <div class="ui dropdown item" v-for="(crs, index) in courses" :key="index" :value="crs.Keyword" v-on:click="getCourse(crs.Keyword)">{{crs.Title}}</div>
+      <div class="twelve wide column">
+        <div class="row">
+        <div class="ui text menu">
+          <div class="item">
+            <img src="/images/alhuda-media.png">
+          </div>
+          <div class="ui dropdown item" v-dropdown>
+          <div class="ui red horizontal label" v-show="courses.length == 0">Select a category</div>
+          <div class="text" v-show="courses.length != 0">Browse Courses</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item" v-for="(crs, index) in courses" :key="index" :value="crs.Keyword" v-on:click="getCourse(crs.Keyword)">{{crs.Title}}
+            </div>
+            </div>
+            </div>
+          <div class="ui right dropdown item" v-dropdown>
+              More
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item">Applications</div>
+                <div class="item">International Students</div>
+                <div class="item">Scholarships</div>
+              </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="ui grid">
-      <div v-if="course.length != 0" class="sixteen wide column">
-        <div class="ui label large">{{course.Course.Title}}</div>
-          <div class="ui accordion fluid styled" v-accordion>
-            <div v-for="(top, index) in course.Course.Topic" :key="index">
-              <div class="title"><i class="dropdown icon"></i>{{top.Title}}</div>
-              <div class="content">
-                <div class="ui accordion" v-for="(les, index) in top.Lesson" :key="index">
-                  <div class="title"><i class="dropdown icon"></i>{{les.Title}}</div>
-                  <div class="content">
-                    <div class="ui divided list selection">
-                      <div class="item" v-for="(res, index) in les.Resource" :key="index" v-on:click="loadAudio(res.DownloadLocation)">
-                        <i class="play large middle aligned icon"></i>
-                        <div class="content">
-                          <div class="header">{{res.Title}}</div>
-                          <div class="description">Duration: {{res.Duration}}</div>
+        </div>
+        <div class="row">
+          <div v-if="course.length != 0" class="sixteen wide column">
+            <div class="ui label large">{{course.Course.Title}}</div>
+              <div class="ui accordion fluid styled" v-accordion>
+                <div v-for="(top, index) in course.Course.Topic" :key="index">
+                <div class="title"><i class="dropdown icon"></i>{{top.Title}}</div>
+                <div class="content">
+                  <div class="ui accordion" v-for="(les, index) in top.Lesson" :key="index">
+                    <div class="title"><i class="dropdown icon"></i>{{les.Title}}</div>
+                    <div class="content">
+                      <div class="ui divided list selection">
+                        <div class="item" v-for="(res, index) in les.Resource" :key="index" v-on:click="loadAudio(res.DownloadLocation)">
+                          <i class="play large middle aligned icon"></i>
+                          <div class="content">
+                            <div class="header">{{res.Title}}</div>
+                            <div class="description">Duration: {{res.Duration}}</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -43,6 +62,7 @@
               </div>
             </div>
           </div>
+      </div>
       </div>
     </div>
     <div class="ui grid">
