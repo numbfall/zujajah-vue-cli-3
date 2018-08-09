@@ -2,36 +2,12 @@
 <div class="main">
   <div class="ui stackable grid">
     <div class="four wide column">
-      <div class="row">
-        <div class="ui vertical menu">
-          <div class="item" v-for="(cat, index) in category.Categories" :key="index">
-            <div class="header">{{cat.Title}}</div>
-            <div class="menu">
-              <a class="item link" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)"
-                :value="subCat.Title">{{subCat.Title}}</a>
-            </div>
+      <div class="ui vertical menu">
+        <div class="item" v-for="(cat, index) in category.Categories" :key="index">
+          <div class="header">{{cat.Title}}</div>
+          <div class="menu">
+            <div class="item link" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</div>
           </div>
-        </div>
-      <div class="row">
-        <div class="ui card">
-          <div class="section">
-            <a class="" :href="resource" :download="download" target=”_blank”><i class="download icon"></i></a>
-            <div class="">{{current}}</div>
-          </div>
-          <div class="section">
-            
-              <button v-on:click="play" class="ui button" id="play-button">
-                <i class="play icon"></i>
-              </button>
-            
-            <input id="trackProgressBar" v-model="trackProgress" type="range" min="0">
-          </div>
-          <div class="section">
-            <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="seekTrack($event.target.currentTime)" v-bind:currentTime.prop="trackProgress" controls>
-              <source :src="resource">
-            </audio>
-          </div>
-        </div>
       </div>
     </div>
     </div>
@@ -45,7 +21,7 @@
             <div class="text">Browse Courses</div>
             <i class="dropdown icon"></i>
             <div class="menu">
-              <div class="item" v-for="(crs, index) in courses" :key="index" :value="crs.Keyword" v-on:click="getCourse(crs.Keyword)">{{crs.Title}}
+              <div class="item" v-for="(crs, index) in courses" :key="index" v-on:click="getCourse(crs.Keyword)">{{crs.Title}}
               </div>
             </div>
           </div>
@@ -88,6 +64,25 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="ui card">
+          <div class="section">
+            <a class="" :href="resource" :download="download" target=”_blank”><i class="download icon"></i></a>
+            <div class="">{{current}}</div>
+          </div>
+          <div class="section">
+            
+              <button v-on:click="play" class="ui button" id="play-button">
+                <i class="play icon"></i>
+              </button>
+            
+            <input id="trackProgressBar" v-model="trackProgress" type="range" min="0">
+          </div>
+          <div class="section">
+            <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="seekTrack($event.target.currentTime)" v-bind:currentTime.prop="trackProgress" controls>
+              <source :src="resource">
+            </audio>
           </div>
         </div>
         <div v-show="loader" class="sixteen wide column">
