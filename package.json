@@ -29,9 +29,7 @@
       "eslint:recommended"
     ],
     "rules": {
-      "no-undef": 0,
-      "no-redeclare": 0,
-      "no-unused-vars": 0
+      "no-undef": 0
     },
     "parserOptions": {
       "parser": "babel-eslint"

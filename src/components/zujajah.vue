@@ -2,15 +2,38 @@
 <div class="main">
   <div class="ui stackable grid">
     <div class="four wide column">
-      <div class="ui vertical menu">
-        <div class="item" v-for="(cat, index) in category.Categories" :key="index">
-          <div class="header">{{cat.Title}}</div>
-          <div class="menu">
-            <a class="item link" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)"
-              :value="subCat.Title">{{subCat.Title}}</a>
+      <div class="row">
+        <div class="ui vertical menu">
+          <div class="item" v-for="(cat, index) in category.Categories" :key="index">
+            <div class="header">{{cat.Title}}</div>
+            <div class="menu">
+              <a class="item link" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)"
+                :value="subCat.Title">{{subCat.Title}}</a>
+            </div>
+          </div>
+        </div>
+      <div class="row">
+        <div class="ui card">
+          <div class="section">
+            <a class="" :href="resource" :download="download" target=”_blank”><i class="download icon"></i></a>
+            <div class="">{{current}}</div>
+          </div>
+          <div class="section">
+            <div class="ui big buttons teal">
+              <div v-on:click="play" class="ui button" id="play-button">
+                <i class="play icon"></i> Play
+              </div>
+            </div>
+            <input id="trackProgressBar" v-model="trackProgress" type="range" min="0">
+          </div>
+          <div class="section">
+            <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="seekTrack($event.target.currentTime)" v-bind:currentTime.prop="trackProgress" controls>
+              <source :src="resource">
+            </audio>
           </div>
         </div>
       </div>
+    </div>
     </div>
     <div class="twelve wide column">
       <div class="row">
@@ -78,21 +101,6 @@
       </div>
     </div>
   </div>
-  <div class="">
-    <a class="ui button red large" v-on:click="loadAudioTemp('https://media.blubrry.com/muslim_central_quran/audio1.qurancentral.com/ibrahim-al-akhdar/ibrahim-al-akhdar-001.mp3', 'hi')">LOAD</a>
-    <div class="">
-      <a class="" :href="resource" :download="download" target=”_blank”><i class="download icon"></i></a>
-      <div class="">{{current}}</div>
-    </div>
-    <div class="">
-      <input id="trackProgressBar" v-model="trackProgress" type="range" min="0">
-    </div>
-    <div class="">
-      <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="seekTrack($event.target.currentTime)" v-bind:currentTime.prop="trackProgress" controls>
-        <source :src="resource">
-      </audio>
-    </div>
-  </div>
   <ul v-if="errors && errors.length">
     <li v-for="error of errors" :key='error'>
       {{error.message}}
@@ -103,6 +111,7 @@
 
 <script>
 import axios from 'axios'
+// import _ from 'lodash'
 
 export default {
   name: 'zujajah',
@@ -132,12 +141,17 @@ export default {
   },
 
   methods: {
+    play: function (event) {
+        if ($('audio')[0].paused) {
+          $(event.target).toggleClass('active')
+          $('audio')[0].oncanplay = $('audio')[0].play()
+        } else {
+          $(event.target).removeClass('active')
+          $('audio')[0].pause()
+        }
+    },
     loadAudio: function (res, ttl) {
       this.resource = 'http://alhudamedia.com/' + res
-      this.current = ttl
-    },
-    loadAudioTemp: function (res, ttl) {
-      this.resource = res
       this.current = ttl
     },
     getCourse: function (val) {
@@ -192,6 +206,10 @@ a {
   color: #42b983;
 }
 
+audio {
+  display: none;
+}
+
 .debug div {
   border: 1px solid lightgoldenrodyellow;
 }
@@ -205,6 +223,119 @@ a {
 
 .ui.styled.accordion .accordion .content {
   padding: 0;
+}
+
+#trackProgressBar {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+}
+
+input[type=range]#trackProgressBar {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+    margin-top: 8px;
+}
+
+input[type=range]#trackProgressBar:focus {
+    outline: none;
+    border: none;
+}
+
+input[type=range]#trackProgressBar::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #00AA88;
+    border-radius: 1.3px;
+    border: 10px solid #00AA88;
+    border-right: none;
+    border-left: none;
+}
+
+input[type=range]#trackProgressBar::-webkit-slider-thumb {
+    box-shadow: none;
+    border: none;
+    height: 20px;
+    width: 10px;
+    border-radius: 0px;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+}
+
+input[type=range]#trackProgressBar:focus::-webkit-slider-runnable-track {
+    background: #00AA88;
+}
+
+input[type=range]#trackProgressBar::-moz-range-track {
+    width: 100%;
+    height: 0px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #00AA88;
+    border-radius: 1.3px;
+    border: 10px solid #00AA88;
+    border-right: none;
+    border-left: none;
+}
+
+input[type=range]#trackProgressBar::-moz-range-thumb {
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.65);
+    border: none;
+    height: 20px;
+    width: 10px;
+    border-radius: 0px;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+}
+
+input[type=range]#trackProgressBar::-ms-track {
+    width: 100%;
+    height: 0px;
+    cursor: pointer;
+    background: #00AA88;
+    border-color: #00AA88;
+    border-width: 10px 0;
+    color: transparent;
+}
+
+input[type=range]#trackProgressBar::-ms-fill-lower {
+    background: #0096c1;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+input[type=range]#trackProgressBar::-ms-fill-upper {
+    background: #00AA88;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+input[type=range]#trackProgressBar::-ms-thumb {
+    box-shadow: none;
+    border: none;
+    height: 20px;
+    width: 10px;
+    border-radius: 0px;
+    background: white;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+input[type=range]#trackProgressBar:focus::-ms-fill-lower {
+    background: #00AA88;
+}
+
+input[type=range]#trackProgressBar:focus::-ms-fill-upper {
+    background: #00AA88;
 }
 
 </style>
