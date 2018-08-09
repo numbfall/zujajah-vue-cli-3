@@ -78,13 +78,17 @@
       </div>
     </div>
   </div>
-  <div v-show="resource != ''" class="">
+  <div class="">
+    <a class="ui button red large" v-on:click="loadAudioTemp('https://media.blubrry.com/muslim_central_quran/audio1.qurancentral.com/ibrahim-al-akhdar/ibrahim-al-akhdar-001.mp3', 'hi')">LOAD</a>
     <div class="">
       <a class="" :href="resource" :download="download" target=”_blank”><i class="download icon"></i></a>
       <div class="">{{current}}</div>
     </div>
     <div class="">
-      <audio class="" controls>
+      <input id="trackProgressBar" v-model="trackProgress" type="range" min="0">
+    </div>
+    <div class="">
+      <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="seekTrack($event.target.currentTime)" v-bind:currentTime.prop="trackProgress" controls>
         <source :src="resource">
       </audio>
     </div>
@@ -111,6 +115,8 @@ export default {
       course: [],
       resource: '',
       loader: false,
+      trackProgress: 0,
+      trackDuration: 0,
       errors: []
     }
   },
@@ -130,6 +136,10 @@ export default {
       this.resource = 'http://alhudamedia.com/' + res
       this.current = ttl
     },
+    loadAudioTemp: function (res, ttl) {
+      this.resource = res
+      this.current = ttl
+    },
     getCourse: function (val) {
       this.courses = []
       this.loader = true
@@ -146,6 +156,9 @@ export default {
     showCourses: function (cat, ind) {
       this.courses = this.category.Categories[cat].Subcategories[ind].Courses
       this.selected = this.category.Categories[cat].Subcategories[ind].Title 
+    },
+    seekTrack: function (val) {
+      $('#trackProgressBar').val(val)
     }
   },
 
@@ -153,6 +166,9 @@ export default {
     resource: (url) => {
       $('audio')[0].load(url)
       $('audio')[0].play()
+    },
+    trackDuration: (val) => {
+      $('#trackProgressBar').attr('max' , val)
     }
   },
 
@@ -165,7 +181,7 @@ export default {
         .replace(/^-+/, '')             // Trim - from start of text
         .replace(/-+$/, '')             // Trim - from end of text
         .concat('.mp3');                // Add mp3 to the end
-    } 
+    }
   }
 }
 </script>
