@@ -19,17 +19,19 @@
             <img src="/images/alhuda-media.png">
           </div>
           <div class="ui dropdown item" v-dropdown>
-            <div class="text" v-show="courses.length != 0">Browse Courses</div>
+            <div class="text">Browse Courses</div>
             <i class="dropdown icon"></i>
             <div class="menu">
               <div class="item" v-for="(crs, index) in courses" :key="index" :value="crs.Keyword" v-on:click="getCourse(crs.Keyword)">{{crs.Title}}
               </div>
             </div>
-            <div class="ui red horizontal label" v-show="courses.length == 0">Select a category</div>
-            <div class="ui green horizontal label" v-show="courses.length != 0">{{selected}}</div>
+          </div>
+          <div class="item">
+            <div class="ui left pointing red label" v-show="courses.length == 0">Select a category from sidebar</div>
+            <div class="ui left pointing green label" v-show="courses.length != 0">Browse Courses in {{selected}}<div class="detail">{{courses.length}}</div></div>
           </div>
           <div class="ui right dropdown item" v-dropdown>
-            More
+            <div class="text">More</div>
             <i class="dropdown icon"></i>
             <div class="menu">
               <a class="item">Applications</a>
