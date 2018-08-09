@@ -26,12 +26,12 @@
             <div v-for="(top, index) in course.Course.Topic" :key="index">
               <div class="title"><i class="dropdown icon"></i>{{top.Title}}</div>
               <div class="content">
-                <div class="ui accordion styled" v-for="(les, index) in top.Lesson" :key="index">
+                <div class="ui accordion" v-for="(les, index) in top.Lesson" :key="index">
                   <div class="title"><i class="dropdown icon"></i>{{les.Title}}</div>
                   <div class="content">
-                    <div class="ui relaxed divided list selection">
+                    <div class="ui divided list selection">
                       <div class="item" v-for="(res, index) in les.Resource" :key="index" v-on:click="loadAudio(res.DownloadLocation)">
-                        <i class="play icon large"></i>
+                        <i class="play large middle aligned icon"></i>
                         <div class="content">
                           <div class="header">{{res.Title}}</div>
                           <div class="description">Duration: {{res.Duration}}</div>
@@ -133,6 +133,10 @@ audio {
   bottom: 0;
   right: 0;
   min-width: 30em;
+}
+
+.ui.styled.accordion .accordion .content {
+  padding: 0;
 }
 
 </style>
