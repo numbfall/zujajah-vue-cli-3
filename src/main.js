@@ -7,13 +7,13 @@ window.jQuery = require('jquery')
 
 Vue.directive('dropdown', {
   bind(el) {
-    $(el).dropdown() // http://semantic-ui.com/modules/dropdown.html#/usage
+    $(el).dropdown()
   }
 })
 
 Vue.directive('accordion', {
   bind(el) {
-    $(el).accordion() // http://semantic-ui.com/modules/dropdown.html#/usage
+    $(el).accordion()
   }
 })
 

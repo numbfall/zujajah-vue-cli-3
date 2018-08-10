@@ -1,6 +1,6 @@
 <template>
 <div class="main">
-  <div class="ui stackable grid">
+  <div class="ui grid">
     <div class="four wide column">
       <div class="ui vertical menu">
         <div class="item" v-for="(cat, index) in category.Categories" :key="index">
@@ -65,31 +65,32 @@
               </div>
             </div>
           </div>
-        </div>
-        
+        </div>    
         <div v-show="resource != ''" class="ui card">
           <div class="ui segment">
-  <div v-show="trackDuration == 0" class="ui active dimmer">
-    <div class="ui indeterminate text loader">Waiting for Audio</div>
-  </div>
-  <p></p>
-
-          <div class="section">
-            <a class="ui teal button" :href="resource" :download="download" target=”_blank”><i class="download icon"></i></a>
-            <div class="">{{current}}</div>
-          </div>
-            
+            <div v-show="trackProgress == 0" class="ui active dimmer">
+              <div class="ui indeterminate text loader">Waiting for Audio</div>
+            </div>
+            <div class="content">
+              <h4>{{current}}</h4>
+              <br>
+            </div>
+            <div class="content">
               <button v-on:click="play" class="ui teal icon button" id="play-button">
                 <i class="play icon"></i>
               </button>
-            
+              <a class="ui teal icon button" :href="resource" :download="download" target=”_blank”>
+                <i class="download icon"></i>
+              </a>
+            </div>
             <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
-          <div class="section">
-            <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="trackProgress = $event.target.currentTime" controls>
-              <source :src="resource">
-            </audio>
+            <div class="content">
+              <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="trackProgress = $event.target.currentTime"
+                controls>
+                <source :src="resource">
+              </audio>
+            </div>
           </div>
-        </div>
         </div>
         <div v-show="loader" class="sixteen wide column">
           <div class="ui segment">
@@ -160,7 +161,6 @@ export default {
       }
     },
     loadAudio: function (res, ttl) {
-      this.trackDuration = 0
       this.trackProgress = 0
       this.resource = 'http://alhudamedia.com/' + res
       this.current = ttl
@@ -239,7 +239,7 @@ audio {
 }
 
 .ui.card {
-  right: 0;
+  right: 1em;
   bottom: 0;
   position: fixed;
 }
@@ -275,7 +275,7 @@ input[type=range]#trackProgressBar::-webkit-slider-runnable-track {
 }
 
 input[type=range]#trackProgressBar::-webkit-slider-thumb {
-    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
+    box-shadow: 0 0 5px 0 rgba(34,36,38,.15) inset;
     border: none;
     height: 20px;
     width: 10px;
@@ -303,7 +303,7 @@ input[type=range]#trackProgressBar::-moz-range-track {
 }
 
 input[type=range]#trackProgressBar::-moz-range-thumb {
-    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
+    box-shadow: 0 0 5px 0 rgba(34,36,38,.15) inset;
     border: none;
     height: 20px;
     width: 10px;
@@ -339,7 +339,7 @@ input[type=range]#trackProgressBar::-ms-fill-upper {
 }
 
 input[type=range]#trackProgressBar::-ms-thumb {
-    box-shadow: none;
+    box-shadow: 0 0 5px 0 rgba(34,36,38,.15) inset;
     border: none;
     height: 20px;
     width: 10px;
