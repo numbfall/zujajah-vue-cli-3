@@ -77,10 +77,10 @@
                 <i class="play icon"></i>
               </button>
             
-            <input id="trackProgressBar" v-model="trackProgress" type="range" min="0">
+            <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
           </div>
           <div class="section">
-            <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="seekTrack($event.target.currentTime)" v-bind:currentTime.prop="trackProgress" controls>
+            <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="trackProgress = $event.target.currentTime" controls>
               <source :src="resource">
             </audio>
           </div>
@@ -110,6 +110,7 @@ import axios from 'axios'
 
 export default {
   name: 'zujajah',
+
   data () {
     return {
       category: [],
@@ -165,16 +166,6 @@ export default {
     showCourses: function (cat, ind) {
       this.courses = this.category.Categories[cat].Subcategories[ind].Courses
       this.selected = this.category.Categories[cat].Subcategories[ind].Title 
-    },
-    seekTrack: function (val) {
-      $('#trackProgressBar').val(val)
-      if (!$('audio')[0].paused) {
-        $('#play-button').find('i').removeClass('play')
-        $('#play-button').find('i').addClass('pause')
-      } else {
-        $('#play-button').find('i').removeClass('pause')
-        $('#play-button').find('i').addClass('play')
-      }
     }
   },
 
@@ -183,8 +174,17 @@ export default {
       $('audio')[0].load(url)
       $('audio')[0].play()
     },
-    trackDuration: (val) => {
-      $('#trackProgressBar').attr('max' , val)
+    trackProgress: function (tim) {
+    	if (Math.abs(tim - $('audio')[0].currentTime) > 0.5) {
+        $('audio')[0].currentTime = tim
+      }
+      if (!$('audio')[0].paused) {
+        $('#play-button').find('i').removeClass('play')
+        $('#play-button').find('i').addClass('pause')
+      } else {
+        $('#play-button').find('i').removeClass('pause')
+        $('#play-button').find('i').addClass('play')
+      }
     }
   },
 
@@ -221,6 +221,12 @@ a {
 
 .ui.styled.accordion .accordion .content {
   padding: 0;
+}
+
+.ui.card {
+  right: 0;
+  bottom: 0;
+  position: fixed;
 }
 
 #trackProgressBar {

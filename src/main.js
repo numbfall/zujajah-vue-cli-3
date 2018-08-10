@@ -5,12 +5,6 @@ import 'semantic-ui-css/semantic.min.js'
 
 window.jQuery = require('jquery')
 
-Vue.directive('popup', {
-  bind(el) {
-    $(el).popup() // http://semantic-ui.com/modules/dropdown.html#/usage
-  }
-})
-
 Vue.directive('dropdown', {
   bind(el) {
     $(el).dropdown() // http://semantic-ui.com/modules/dropdown.html#/usage
