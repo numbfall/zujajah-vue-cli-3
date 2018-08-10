@@ -1,6 +1,6 @@
 <template>
 <div class="main">
-  <div class="ui two column centered grid">
+  <div class="ui two column grid">
     <div class="four wide column">
       <div class="ui vertical menu">
         <div class="item" v-for="(cat, index) in category.Categories" :key="index">
@@ -16,14 +16,14 @@
             <div class="ui indeterminate text loader">Waiting for Audio</div>
           </div> -->
           <div v-if="current" class="content">
-            <h4>{{current}}</h4>
+            <h4 class="ui header">{{current}}</h4>
             <br>
           </div>
           <div v-else class="content">
             <h4>No audio is selected</h4>
             <br>
           </div>
-          <div class="content center aligned">
+          <div class="ui fluid buttons">
             <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="Play/Pause">
               <i class="play icon"></i>
             </button>
@@ -53,6 +53,11 @@
           </div>
         </div>  
       </div>
+      <footer class="ui one column padded centered grid">
+        <div class="fourteen wide center aligned column">
+          <i class="code grey icon"></i> with <i class="heart grey icon"></i> by <a class="teal" href="https://usmankhwaja.com" target="_blank">Usman Khwaja</a> using <a href="https://vuejs.org/" target="blank"><i class="vuejs icon"></i>Vue.js</a> &amp; &nbsp;<a href="https://semantic-ui.com/" target="_blank">Semantic UI</a>
+        </div>
+      </footer>
     </div>
     <div class="twelve wide column" id="context">
       <div class="row">
@@ -162,7 +167,7 @@ export default {
         this.errors.push(e)
       })
       $(document).ready(function () {
-        $('.ui.teal.icon.button').popup()
+        $('.ui.sticky .ui.icon.button').popup()
       })
   },
 
@@ -274,7 +279,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 a {
-  color: #42b983;
+  color: teal;
 }
 
 audio {
@@ -286,7 +291,6 @@ audio {
 }
 
 .main {
-  padding: 1em;
   max-width: 950px;
   margin: 0 auto;
   text-align: left;
