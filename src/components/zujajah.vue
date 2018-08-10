@@ -28,10 +28,10 @@
               <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="Play/Pause">
                 <i class="play icon"></i>
               </button>
-              <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="-5s">
+              <button v-on:click="rvrseBtn" class="ui teal icon button" id="play-button" data-content="-10s">
                 <i class="step backward icon"></i>
               </button>
-              <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="+5s">
+              <button v-on:click="frwrdBtn" class="ui teal icon button" id="play-button" data-content="+10s">
                 <i class="step forward icon"></i>
               </button>
               <a class="ui teal icon button" :href="resource" :download="download" target=”_blank” data-content="Right-click to Download">
@@ -234,7 +234,13 @@ export default {
       this.currentDuration = (currentDurHour < 10 ? '0' + currentDurHour : currentDurHour) +
       ':' + (currentDurMin < 10 ? '0' + currentDurMin : currentDurMin) +
       ':' + (currentDurSec < 10 ? '0' + currentDurSec : currentDurSec)
-    }
+    },
+    frwrdBtn: function() {
+      this.trackProgress += 10;
+    },
+    rvrseBtn: function() {
+      this.trackProgress -= 10;
+    },
   },
 
   watch: {
