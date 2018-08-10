@@ -176,8 +176,7 @@ export default {
         $('.ui.sticky .ui.icon.button').popup()
         $('.browse.item').popup({
           popup: '.courses.popup',
-          hoverable: true,
-          observeChanges: false
+          hoverable: true
         })
       })
   },
@@ -233,6 +232,7 @@ export default {
     showCourses: function (cat, ind) {
       this.courses = this.category.Categories[cat].Subcategories[ind].Courses
       this.selected = this.category.Categories[cat].Subcategories[ind].Title
+      $('.browse.item').popup('show')
     },
     refreshSticky: function () {
       $('.ui.sticky').sticky('refresh')
