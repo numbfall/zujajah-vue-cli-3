@@ -32,7 +32,14 @@
                 <i class="download icon"></i>
               </a>
             </div>
-            <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
+            <div class="content">
+              <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
+              <div class="ui grid">
+                <div class="six wide column"><span id="currentDuration">{{currentDuration}}</span></div>
+                <div class="two wide column"><span>/</span></div>
+                <div class="six wide column"><span id="totalDuration">{{totalDuration}}</span></div>
+              </div>
+            </div>
             <div class="content">
               <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="trackProgress = $event.target.currentTime"
                 controls>
@@ -136,6 +143,8 @@ export default {
       loader: false,
       trackProgress: 0,
       trackDuration: 0,
+      currentDuration: '',
+      totalDuration: '',
       errors: []
     }
   },
@@ -201,6 +210,23 @@ export default {
     },
     refreshSticky: function () {
       $('.ui.sticky').sticky('refresh')
+    },
+    updateTime: function (dur) {
+      var totalDurHour = Math.floor(Math.floor(dur) / 3600)
+      var totalDurMin = Math.floor(Math.floor(dur / 60) % 60)
+      var totalDurSec = Math.floor(dur) % 60
+      this.totalDuration = (totalDurHour < 10 ? '0' + totalDurHour : totalDurHour) +
+        ':' + (totalDurMin < 10 ? '0' + totalDurMin : totalDurMin) +
+        ':' + (totalDurSec < 10 ? '0' + totalDurSec : totalDurSec)
+      this.currentDuration = '00:00:00'
+    },
+    updateProgress: function (elemDotMethod, divider) {
+      var currentDurHour = Math.floor(Math.floor(elemDotMethod / divider) / 3600)
+      var currentDurMin = Math.floor(Math.floor((elemDotMethod / divider) / 60) % 60)
+      var currentDurSec = Math.floor(elemDotMethod / divider) % 60
+      this.currentDuration = (currentDurHour < 10 ? '0' + currentDurHour : currentDurHour) +
+      ':' + (currentDurMin < 10 ? '0' + currentDurMin : currentDurMin) +
+      ':' + (currentDurSec < 10 ? '0' + currentDurSec : currentDurSec)
     }
   },
 
@@ -213,6 +239,10 @@ export default {
       if (Math.abs(tim - $('audio')[0].currentTime) > 0.5) {
         $('audio')[0].currentTime = tim
       }
+      this.updateProgress(this.trackProgress, 1)
+    },
+    trackDuration: function (dur) {
+      this.updateTime(dur)
     }
   },
 
