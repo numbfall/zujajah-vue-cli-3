@@ -51,8 +51,13 @@
         </div>  
       </div>
       <footer class="ui one column padded centered grid">
-        <div class="fourteen wide center aligned column">
-          <i class="code grey icon"></i> with <i class="heart grey icon"></i> by <a class="teal" href="https://usmankhwaja.com" target="_blank">Usman Khwaja</a> using <a href="https://vuejs.org/" target="blank"><i class="vuejs icon"></i>Vue.js</a> &amp; &nbsp;<a href="https://semantic-ui.com/" target="_blank">Semantic UI</a>
+        <div class="wide center aligned column">
+          <p>
+            <i class="code grey icon"></i> with <i class="heart grey icon"></i> by <a class="teal" href="https://usmankhwaja.com" target="_blank">Usman Khwaja</a> using <a href="https://vuejs.org/" target="blank"><i class="vuejs icon"></i>Vue.js</a> &amp; <a href="https://semantic-ui.com/" target="_blank">Semantic UI</a>
+          </p>
+          <p>
+          For any bugs please create an issue on <a href="https://github.com/numbfall/zujajah-vue-cli-3/issues" target="_blank"><i class="github icon"></i>Github</a>
+          </p>
         </div>
       </footer>
     </div>
@@ -299,7 +304,7 @@ audio {
   display: none;
 }
 
-.debug div {
+.debug * {
   border: 1px solid lightgoldenrodyellow;
 }
 
