@@ -66,24 +66,30 @@
             </div>
           </div>
         </div>
-        <div class="ui card">
+        
+        <div v-show="resource != ''" class="ui card">
+          <div class="ui segment">
+  <div v-show="trackDuration == 0" class="ui active dimmer">
+    <div class="ui indeterminate text loader">Waiting for Audio</div>
+  </div>
+  <p></p>
+
           <div class="section">
-            <a class="" :href="resource" :download="download" target=”_blank”><i class="download icon"></i></a>
+            <a class="ui teal button" :href="resource" :download="download" target=”_blank”><i class="download icon"></i></a>
             <div class="">{{current}}</div>
           </div>
-          <div class="section">
             
-              <button v-on:click="play" class="ui button" id="play-button">
+              <button v-on:click="play" class="ui teal icon button" id="play-button">
                 <i class="play icon"></i>
               </button>
             
             <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
-          </div>
           <div class="section">
             <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="trackProgress = $event.target.currentTime" controls>
               <source :src="resource">
             </audio>
           </div>
+        </div>
         </div>
         <div v-show="loader" class="sixteen wide column">
           <div class="ui segment">
@@ -143,12 +149,24 @@ export default {
       } else {
         $('audio')[0].pause()
       }
+      if (!$('audio')[0].paused) {
+        $('#play-button').toggleClass('active')
+        $('#play-button').find('i').removeClass('play')
+        $('#play-button').find('i').addClass('pause')
+      } else {
+        $('#play-button').toggleClass('active')
+        $('#play-button').find('i').removeClass('pause')
+        $('#play-button').find('i').addClass('play')
+      }
     },
     loadAudio: function (res, ttl) {
       this.trackDuration = 0
       this.trackProgress = 0
       this.resource = 'http://alhudamedia.com/' + res
       this.current = ttl
+      $('#play-button').addClass('active')
+      $('#play-button').find('i').removeClass('play')
+      $('#play-button').find('i').addClass('pause')
     },
     getCourse: function (val) {
       this.courses = []
@@ -175,15 +193,8 @@ export default {
       $('audio')[0].play()
     },
     trackProgress: function (tim) {
-    	if (Math.abs(tim - $('audio')[0].currentTime) > 0.5) {
+      if (Math.abs(tim - $('audio')[0].currentTime) > 0.5) {
         $('audio')[0].currentTime = tim
-      }
-      if (!$('audio')[0].paused) {
-        $('#play-button').find('i').removeClass('play')
-        $('#play-button').find('i').addClass('pause')
-      } else {
-        $('#play-button').find('i').removeClass('pause')
-        $('#play-button').find('i').addClass('play')
       }
     }
   },
@@ -206,6 +217,10 @@ export default {
 <style scoped>
 a {
   color: #42b983;
+}
+
+audio {
+  display: none;
 }
 
 .debug div {
@@ -252,15 +267,15 @@ input[type=range]#trackProgressBar::-webkit-slider-runnable-track {
     height: 2px;
     cursor: pointer;
     box-shadow: none;
-    background: #00AA88;
+    background: #00b5ad;
     border-radius: 1.3px;
-    border: 10px solid #00AA88;
+    border: 10px solid #00b5ad;
     border-right: none;
     border-left: none;
 }
 
 input[type=range]#trackProgressBar::-webkit-slider-thumb {
-    box-shadow: none;
+    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
     border: none;
     height: 20px;
     width: 10px;
@@ -272,7 +287,7 @@ input[type=range]#trackProgressBar::-webkit-slider-thumb {
 }
 
 input[type=range]#trackProgressBar:focus::-webkit-slider-runnable-track {
-    background: #00AA88;
+    background: #00b5ad;
 }
 
 input[type=range]#trackProgressBar::-moz-range-track {
@@ -280,15 +295,15 @@ input[type=range]#trackProgressBar::-moz-range-track {
     height: 0px;
     cursor: pointer;
     box-shadow: none;
-    background: #00AA88;
+    background: #00b5ad;
     border-radius: 1.3px;
-    border: 10px solid #00AA88;
+    border: 10px solid #00b5ad;
     border-right: none;
     border-left: none;
 }
 
 input[type=range]#trackProgressBar::-moz-range-thumb {
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.65);
+    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
     border: none;
     height: 20px;
     width: 10px;
@@ -303,8 +318,8 @@ input[type=range]#trackProgressBar::-ms-track {
     width: 100%;
     height: 0px;
     cursor: pointer;
-    background: #00AA88;
-    border-color: #00AA88;
+    background: #00b5ad;
+    border-color: #00b5ad;
     border-width: 10px 0;
     color: transparent;
 }
@@ -317,7 +332,7 @@ input[type=range]#trackProgressBar::-ms-fill-lower {
 }
 
 input[type=range]#trackProgressBar::-ms-fill-upper {
-    background: #00AA88;
+    background: #00b5ad;
     border: none;
     border-radius: 0px;
     box-shadow: none;
@@ -335,11 +350,11 @@ input[type=range]#trackProgressBar::-ms-thumb {
 }
 
 input[type=range]#trackProgressBar:focus::-ms-fill-lower {
-    background: #00AA88;
+    background: #00b5ad;
 }
 
 input[type=range]#trackProgressBar:focus::-ms-fill-upper {
-    background: #00AA88;
+    background: #00b5ad;
 }
 
 </style>
