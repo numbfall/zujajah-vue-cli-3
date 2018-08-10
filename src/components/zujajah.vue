@@ -1,6 +1,6 @@
 <template>
 <div class="main">
-  <div class="ui grid">
+  <div class="ui two column centered grid">
     <div class="four wide column">
       <div class="ui vertical menu">
         <div class="item" v-for="(cat, index) in category.Categories" :key="index">
@@ -10,8 +10,8 @@
           </div>
       </div>
     </div>
-         <div class="ui sticky">
-    <div class="ui card">
+    <div class="ui sticky">
+      <div class="ui card">
           <div class="ui segment">
             <!-- <div v-show="trackProgress == 0" class="ui active dimmer">
               <div class="ui indeterminate text loader">Waiting for Audio</div>
@@ -24,20 +24,26 @@
               <h4>No audio is selected</h4>
               <br>
             </div>
-            <div class="content">
-              <button v-on:click="play" class="ui teal icon button" id="play-button">
+            <div class="content center aligned">
+              <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="Play/Pause">
                 <i class="play icon"></i>
               </button>
-              <a class="ui teal icon button" :href="resource" :download="download" target=”_blank”>
+              <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="-5s">
+                <i class="step backward icon"></i>
+              </button>
+              <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="+5s">
+                <i class="step forward icon"></i>
+              </button>
+              <a class="ui teal icon button" :href="resource" :download="download" target=”_blank” data-content="Right-click to Download">
                 <i class="download icon"></i>
               </a>
             </div>
-            <div class="content">
+            <div class="content center aligned">
               <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
-              <div class="ui grid">
-                <div class="six wide column"><span id="currentDuration">{{currentDuration}}</span></div>
-                <div class="two wide column"><span>/</span></div>
-                <div class="six wide column"><span id="totalDuration">{{totalDuration}}</span></div>
+              <div class="ui three column centered grid">
+                <div class="six wide column"><strong>{{currentDuration}}</strong></div>
+                <div class="two wide column"><strong>/</strong></div>
+                <div class="six wide column"><strong>{{totalDuration}}</strong></div>
               </div>
             </div>
             <div class="content">
@@ -143,8 +149,8 @@ export default {
       loader: false,
       trackProgress: 0,
       trackDuration: 0,
-      currentDuration: '',
-      totalDuration: '',
+      currentDuration: '00:00:00',
+      totalDuration: '00:00:00',
       errors: []
     }
   },
@@ -158,6 +164,7 @@ export default {
         this.errors.push(e)
       })
       $(document).ready(function () {
+        $('.ui.teal.icon.button').popup()
       })
   },
 
@@ -220,10 +227,10 @@ export default {
         ':' + (totalDurSec < 10 ? '0' + totalDurSec : totalDurSec)
       this.currentDuration = '00:00:00'
     },
-    updateProgress: function (elemDotMethod, divider) {
-      var currentDurHour = Math.floor(Math.floor(elemDotMethod / divider) / 3600)
-      var currentDurMin = Math.floor(Math.floor((elemDotMethod / divider) / 60) % 60)
-      var currentDurSec = Math.floor(elemDotMethod / divider) % 60
+    updateProgress: function (prog, divider) {
+      var currentDurHour = Math.floor(Math.floor(prog / divider) / 3600)
+      var currentDurMin = Math.floor(Math.floor((prog / divider) / 60) % 60)
+      var currentDurSec = Math.floor(prog / divider) % 60
       this.currentDuration = (currentDurHour < 10 ? '0' + currentDurHour : currentDurHour) +
       ':' + (currentDurMin < 10 ? '0' + currentDurMin : currentDurMin) +
       ':' + (currentDurSec < 10 ? '0' + currentDurSec : currentDurSec)
@@ -283,10 +290,15 @@ audio {
 
 .ui.sticky {
   margin-top: 0.8em;
+  width: 15rem;
 }
 
 .ui.styled.accordion .accordion .content {
   padding: 0;
+}
+
+.ui.three.column.centered.grid .column {
+  padding-top: 0;
 }
 
 #trackProgressBar {
