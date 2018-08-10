@@ -12,9 +12,6 @@
       </div>
       <div class="ui sticky">
         <div class="ui segment">
-          <!-- <div v-show="trackProgress == 0" class="ui active dimmer">
-            <div class="ui indeterminate text loader">Waiting for Audio</div>
-          </div> -->
           <div v-if="current" class="content">
             <h4 class="ui header">{{current}}</h4>
             <br>
@@ -23,17 +20,17 @@
             <h4>No audio is selected</h4>
             <br>
           </div>
-          <div class="ui fluid buttons">
-            <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="Play/Pause">
+          <div class="ui fluid teal buttons">
+            <button v-on:click="play" class="ui icon button" id="play-button" data-content="Play/Pause">
               <i class="play icon"></i>
             </button>
-            <button v-on:click="rvrseBtn" class="ui teal icon button" id="play-button" data-content="-10s">
+            <button v-on:click="rvrseBtn" class="ui icon button" id="play-button" data-content="-10s">
               <i class="step backward icon"></i>
             </button>
-            <button v-on:click="frwrdBtn" class="ui teal icon button" id="play-button" data-content="+10s">
+            <button v-on:click="frwrdBtn" class="ui icon button" id="play-button" data-content="+10s">
               <i class="step forward icon"></i>
             </button>
-            <a class="ui teal icon button" :href="resource" :download="download" target=”_blank” data-content="Right-click to Download">
+            <a class="ui icon button" :href="resource" :download="download" target=”_blank” data-content="Right-click to Download">
               <i class="download icon"></i>
             </a>
           </div>
@@ -72,7 +69,7 @@
             <div class="ui one column relaxed divided grid">
               <div class="wide column">
                 <div class="header">
-                  <div>{{selected}} &nbsp;<span class="ui label red circular">{{courses.length}}</span></div>
+                  <div>{{selected}} &nbsp;<span class="ui tiny yellow circular label">{{courses.length}}</span></div>
                 </div>
                 <div class="ui link list">
                   <a class="item" v-for="(crs, index) in courses" :key="index" v-on:click="getCourse(crs.Keyword)">{{crs.Title}}</a>
@@ -294,8 +291,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-a {
-  color: teal;
+footer a {
+  color: #008c86;
 }
 
 audio {
@@ -356,12 +353,12 @@ input[type=range]#trackProgressBar::-webkit-slider-runnable-track {
 }
 
 input[type=range]#trackProgressBar::-webkit-slider-thumb {
-    box-shadow: 0 0 5px 0 rgba(34,36,38,.15) inset;
+    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
     border: none;
     height: 20px;
     width: 10px;
     border-radius: 0px;
-    background: white;
+    background: #fbbd08;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -10px;
@@ -384,12 +381,12 @@ input[type=range]#trackProgressBar::-moz-range-track {
 }
 
 input[type=range]#trackProgressBar::-moz-range-thumb {
-    box-shadow: 0 0 5px 0 rgba(34,36,38,.15) inset;
+    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
     border: none;
     height: 20px;
     width: 10px;
     border-radius: 0px;
-    background: white;
+    background: #fbbd08;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -10px;
@@ -420,12 +417,12 @@ input[type=range]#trackProgressBar::-ms-fill-upper {
 }
 
 input[type=range]#trackProgressBar::-ms-thumb {
-    box-shadow: 0 0 5px 0 rgba(34,36,38,.15) inset;
+    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
     border: none;
     height: 20px;
     width: 10px;
     border-radius: 0px;
-    background: white;
+    background: #fbbd08;
     cursor: pointer;
     margin-top: 0px;
 }
