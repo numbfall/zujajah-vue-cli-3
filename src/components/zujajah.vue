@@ -10,8 +10,40 @@
           </div>
       </div>
     </div>
+         <div class="ui sticky">
+    <div class="ui card">
+          <div class="ui segment">
+            <!-- <div v-show="trackProgress == 0" class="ui active dimmer">
+              <div class="ui indeterminate text loader">Waiting for Audio</div>
+            </div> -->
+            <div v-if="current" class="content">
+              <h4>{{current}}</h4>
+              <br>
+            </div>
+            <div v-else class="content">
+              <h4>No audio is selected</h4>
+              <br>
+            </div>
+            <div class="content">
+              <button v-on:click="play" class="ui teal icon button" id="play-button">
+                <i class="play icon"></i>
+              </button>
+              <a class="ui teal icon button" :href="resource" :download="download" target=”_blank”>
+                <i class="download icon"></i>
+              </a>
+            </div>
+            <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
+            <div class="content">
+              <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="trackProgress = $event.target.currentTime"
+                controls>
+                <source :src="resource">
+              </audio>
+            </div>
+          </div>
+        </div>
+        </div>
     </div>
-    <div class="twelve wide column">
+    <div class="twelve wide column" id="context">
       <div class="row">
         <div class="ui text menu">
           <div class="item">
@@ -66,32 +98,6 @@
             </div>
           </div>
         </div>    
-        <div v-show="resource != ''" class="ui card">
-          <div class="ui segment">
-            <div v-show="trackProgress == 0" class="ui active dimmer">
-              <div class="ui indeterminate text loader">Waiting for Audio</div>
-            </div>
-            <div class="content">
-              <h4>{{current}}</h4>
-              <br>
-            </div>
-            <div class="content">
-              <button v-on:click="play" class="ui teal icon button" id="play-button">
-                <i class="play icon"></i>
-              </button>
-              <a class="ui teal icon button" :href="resource" :download="download" target=”_blank”>
-                <i class="download icon"></i>
-              </a>
-            </div>
-            <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
-            <div class="content">
-              <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="trackProgress = $event.target.currentTime"
-                controls>
-                <source :src="resource">
-              </audio>
-            </div>
-          </div>
-        </div>
         <div v-show="loader" class="sixteen wide column">
           <div class="ui segment">
             <div class="ui active inverted dimmer">
@@ -100,6 +106,7 @@
             <br><br><br><br><br><br><br>
           </div>
         </div>
+        <resize-observer @notify="refreshSticky" />
       </div>
     </div>
   </div>
@@ -141,6 +148,8 @@ export default {
       .catch(e => {
         this.errors.push(e)
       })
+      $(document).ready(function () {
+      })
   },
 
   methods: {
@@ -176,6 +185,11 @@ export default {
           this.course = response.data
           $('.accordion .active').removeClass('active')
           this.loader = false
+          $('.ui.sticky').sticky({
+            offset: 10,
+            bottomOffset: 10,
+            context: "#context"
+          })
         })
         .catch(e => {
           this.errors.push(e)
@@ -184,6 +198,9 @@ export default {
     showCourses: function (cat, ind) {
       this.courses = this.category.Categories[cat].Subcategories[ind].Courses
       this.selected = this.category.Categories[cat].Subcategories[ind].Title 
+    },
+    refreshSticky: function () {
+      $('.ui.sticky').sticky('refresh')
     }
   },
 
@@ -234,14 +251,12 @@ audio {
   text-align: left;
 }
 
-.ui.styled.accordion .accordion .content {
-  padding: 0;
+.ui.sticky {
+  margin-top: 0.8em;
 }
 
-.ui.card {
-  right: 1em;
-  bottom: 0;
-  position: fixed;
+.ui.styled.accordion .accordion .content {
+  padding: 0;
 }
 
 #trackProgressBar {
