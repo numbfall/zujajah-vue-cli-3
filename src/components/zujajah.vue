@@ -9,52 +9,50 @@
             <div class="item link" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</div>
           </div>
       </div>
-    </div>
-    <div class="ui sticky">
-      <div class="ui card">
-          <div class="ui segment">
-            <!-- <div v-show="trackProgress == 0" class="ui active dimmer">
-              <div class="ui indeterminate text loader">Waiting for Audio</div>
-            </div> -->
-            <div v-if="current" class="content">
-              <h4>{{current}}</h4>
-              <br>
-            </div>
-            <div v-else class="content">
-              <h4>No audio is selected</h4>
-              <br>
-            </div>
-            <div class="content center aligned">
-              <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="Play/Pause">
-                <i class="play icon"></i>
-              </button>
-              <button v-on:click="rvrseBtn" class="ui teal icon button" id="play-button" data-content="-10s">
-                <i class="step backward icon"></i>
-              </button>
-              <button v-on:click="frwrdBtn" class="ui teal icon button" id="play-button" data-content="+10s">
-                <i class="step forward icon"></i>
-              </button>
-              <a class="ui teal icon button" :href="resource" :download="download" target=”_blank” data-content="Right-click to Download">
-                <i class="download icon"></i>
-              </a>
-            </div>
-            <div class="content center aligned">
-              <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
-              <div class="ui three column centered grid">
-                <div class="six wide column"><strong>{{currentDuration}}</strong></div>
-                <div class="two wide column"><strong>/</strong></div>
-                <div class="six wide column"><strong>{{totalDuration}}</strong></div>
-              </div>
-            </div>
-            <div class="content">
-              <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="trackProgress = $event.target.currentTime"
-                controls>
-                <source :src="resource">
-              </audio>
+      </div>
+      <div class="ui sticky">
+        <div class="ui segment">
+          <!-- <div v-show="trackProgress == 0" class="ui active dimmer">
+            <div class="ui indeterminate text loader">Waiting for Audio</div>
+          </div> -->
+          <div v-if="current" class="content">
+            <h4>{{current}}</h4>
+            <br>
+          </div>
+          <div v-else class="content">
+            <h4>No audio is selected</h4>
+            <br>
+          </div>
+          <div class="content center aligned">
+            <button v-on:click="play" class="ui teal icon button" id="play-button" data-content="Play/Pause">
+              <i class="play icon"></i>
+            </button>
+            <button v-on:click="rvrseBtn" class="ui teal icon button" id="play-button" data-content="-10s">
+              <i class="step backward icon"></i>
+            </button>
+            <button v-on:click="frwrdBtn" class="ui teal icon button" id="play-button" data-content="+10s">
+              <i class="step forward icon"></i>
+            </button>
+            <a class="ui teal icon button" :href="resource" :download="download" target=”_blank” data-content="Right-click to Download">
+              <i class="download icon"></i>
+            </a>
+          </div>
+          <div class="content center aligned">
+            <input id="trackProgressBar" v-model="trackProgress" type="range" min="0" :max="trackDuration">
+            <div class="ui three column centered grid">
+              <div class="six wide column"><strong>{{currentDuration}}</strong></div>
+              <div class="two wide column"><strong>/</strong></div>
+              <div class="six wide column"><strong>{{totalDuration}}</strong></div>
             </div>
           </div>
-        </div>
-        </div>
+          <div class="content">
+            <audio class="" @durationchange="trackDuration = $event.target.duration" @timeupdate="trackProgress = $event.target.currentTime"
+              controls>
+              <source :src="resource">
+            </audio>
+          </div>
+        </div>  
+      </div>
     </div>
     <div class="twelve wide column" id="context">
       <div class="row">
