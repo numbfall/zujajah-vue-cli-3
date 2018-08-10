@@ -6,7 +6,7 @@
         <div class="item" v-for="(cat, index) in category.Categories" :key="index">
           <div class="header">{{cat.Title}}</div>
           <div class="menu">
-            <div class="item link" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</div>
+            <a class="item" @click="active" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</a>
           </div>
       </div>
       </div>
@@ -65,17 +65,23 @@
           <div class="item">
             <img src="/images/alhuda-media.png">
           </div>
-          <div class="ui dropdown item" v-dropdown>
-            <div class="text">Browse Courses</div>
+          <a class="browse item">Browse Courses
             <i class="dropdown icon"></i>
-            <div class="menu">
-              <div class="item" v-for="(crs, index) in courses" :key="index" v-on:click="getCourse(crs.Keyword)">{{crs.Title}}
+          </a>
+          <div class="ui flowing basic courses popup">
+            <div class="ui one column relaxed divided grid">
+              <div class="wide column">
+                <div class="header">
+                  <div>{{selected}} &nbsp;<span class="ui label red circular">{{courses.length}}</span></div>
+                </div>
+                <div class="ui link list">
+                  <a class="item" v-for="(crs, index) in courses" :key="index" v-on:click="getCourse(crs.Keyword)">{{crs.Title}}</a>
+                </div>  
               </div>
             </div>
           </div>
           <div class="item">
             <div class="ui left pointing red label" v-show="courses.length == 0">Select a category from sidebar</div>
-            <div class="ui left pointing green label" v-show="courses.length != 0">Browse Courses in {{selected}}<div class="detail">{{courses.length}}</div></div>
           </div>
           <div class="ui right dropdown item" v-dropdown>
             <div class="text">More</div>
@@ -89,7 +95,7 @@
         </div>
       </div>
       <div class="row">
-        <div v-if="course.length != 0" class="sixteen wide column">
+        <div v-if="course.length != 0" class="sixteen wide column" id="courseResource">
           <div class="ui accordion fluid styled" v-accordion>
             <div v-for="(top, index) in course.Course.Topic" :key="index">
               <div class="title">
@@ -168,10 +174,19 @@ export default {
       })
       $(document).ready(function () {
         $('.ui.sticky .ui.icon.button').popup()
+        $('.browse.item').popup({
+          popup: '.courses.popup',
+          hoverable: true,
+          observeChanges: false
+        })
       })
   },
 
   methods: {
+    active: function (event) {
+      $('.ui.menu a.item').removeClass('active')
+      $(event.currentTarget).addClass('active')
+    },
     play: function () {
       if ($('audio')[0].paused) {
         $('audio')[0].oncanplay = $('audio')[0].play()
@@ -197,13 +212,14 @@ export default {
       $('#play-button').find('i').addClass('pause')
     },
     getCourse: function (val) {
-      this.courses = []
+      $('#courseResource').hide()
       this.loader = true
       axios.get('/resources/xmls/' + val + '.json')
         .then(response => {
           this.course = response.data
           $('.accordion .active').removeClass('active')
           this.loader = false
+          $('#courseResource').show()
           $('.ui.sticky').sticky({
             offset: 10,
             bottomOffset: 10,
@@ -216,7 +232,7 @@ export default {
     },
     showCourses: function (cat, ind) {
       this.courses = this.category.Categories[cat].Subcategories[ind].Courses
-      this.selected = this.category.Categories[cat].Subcategories[ind].Title 
+      this.selected = this.category.Categories[cat].Subcategories[ind].Title
     },
     refreshSticky: function () {
       $('.ui.sticky').sticky('refresh')
