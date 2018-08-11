@@ -4,14 +4,19 @@
     <div class="four wide column">
       <div class="ui vertical menu">
         <div class="item">
-          <div class="ui input"><input placeholder="Search..." type="text" v-model="query"></div>
-          <div id="results"></div>
+          <div class="ui input"><input placeholder="Search..." type="text" v-model="query">
+            <div class="ui fluid basic results popup inverted">
+              <div class="ui link list inverted">
+                <a class="item" v-for="(keys, index) in searchResults" :key="index" v-on:click="getCourse(keys.Keyword)">{{keys.Title}}</a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="ui dropdown item" v-for="(cat, index) in category.Categories" :key="index" v-dropdown>
           {{cat.Title}}
           <i class="dropdown icon"></i>
           <div class="menu">
-            <a class="item" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</a>
+            <a class="item" @click="active" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</a>
           </div>
       </div>
       </div>
@@ -72,14 +77,15 @@
           <div class="item">
             <img src="/images/alhuda-media.png">
           </div>
-          <a class="browse item">Browse Courses
+          <a class="browse item">Browse Courses <span class="ui tiny yellow circular label">{{courses.length}}</span>
             <i class="dropdown icon"></i>
           </a>
           <div class="ui flowing basic courses popup">
             <div class="ui one column relaxed divided grid">
               <div class="wide column">
                 <div class="header">
-                  <div>{{selected}} &nbsp;<span class="ui tiny yellow circular label">{{courses.length}}</span></div>
+                  <div v-show="selected == ''">No Category Selected</div>
+                  <div>{{selected}}</div>
                 </div>
                 <div class="ui link list">
                   <a class="item" v-for="(crs, index) in courses" :key="index" v-on:click="getCourse(crs.Keyword)">{{crs.Title}}</a>
@@ -104,6 +110,7 @@
       <div class="row" v-show="message != 0"><div class="ui icon orange message"><i class="exclamation triangle icon"></i><div class="content"><div class="header">{{message}}</div><p>{{messageBody}}</p></div></div></div>
       <div class="row">
         <div v-if="course.length != 0" class="sixteen wide column" id="courseResource">
+          <h4 class="header">{{course.Course.Title}}</h4>
           <div class="ui accordion fluid styled" v-accordion>
             <div v-for="(top, index) in course.Course.Topic" :key="index">
               <div class="title">
@@ -190,6 +197,12 @@ export default {
           popup: '.courses.popup',
           hoverable: true
         })
+        $('.ui.input input').popup({
+          popup: '.results.popup',
+          position: 'bottom left',
+          hoverable: true,
+          on: 'manual'
+        })
       })
   },
 
@@ -230,6 +243,7 @@ export default {
           this.course = response.data
           $('.accordion .active').removeClass('active')
           this.loader = false
+          this.message = ''
           $('#courseResource').show()
           $('.ui.sticky').sticky({
             offset: 10,
@@ -305,6 +319,13 @@ export default {
       this.$search(que, this.searchSource, options).then(results => {
         this.searchResults = results
       })
+    },
+    searchResults: function (rst) {
+      if (rst.length != 0) {
+        $('.ui.input input').popup('show')
+      } else {
+        $('.ui.input input').popup('hide')
+      }
     }
   },
 
@@ -355,6 +376,10 @@ audio {
   max-width: 950px;
   margin: 0 auto;
   text-align: left;
+}
+
+.ui.fluid.results.popup {
+  min-width: 300px;
 }
 
 .ui.sticky {
