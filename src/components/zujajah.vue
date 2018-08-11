@@ -4,7 +4,7 @@
     <div class="four wide column">
       <div class="ui vertical menu">
         <div class="item">
-          <div class="ui input"><input placeholder="Search..." type="text"></div>
+          <div class="ui input"><input placeholder="Search..." type="text"><div class="results"></div></div>
         </div>
         <div class="ui dropdown item" v-for="(cat, index) in category.Categories" :key="index" v-dropdown>
           {{cat.Title}}
@@ -54,7 +54,7 @@
           </div>
         </div>  
       </div>
-      <footer class="ui one column padded centered grid">
+      <!-- <footer class="ui one column padded centered grid">
         <div class="wide center aligned column">
           <p>
             <i class="code grey icon"></i> with <i class="heart grey icon"></i> by <a class="teal" href="https://usmankhwaja.com" target="_blank">Usman Khwaja</a> using <a href="https://vuejs.org/" target="blank"><i class="vuejs icon"></i>Vue.js</a> &amp; <a href="https://semantic-ui.com/" target="_blank">Semantic UI</a>
@@ -63,7 +63,7 @@
           For any bugs please create an issue on <a href="https://github.com/numbfall/zujajah-vue-cli-3/issues" target="_blank"><i class="github icon"></i>Github</a>
           </p>
         </div>
-      </footer>
+      </footer> -->
     </div>
     <div class="twelve wide column" id="context">
       <div class="row">
