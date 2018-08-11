@@ -4,7 +4,8 @@
     <div class="four wide column">
       <div class="ui vertical menu">
         <div class="item">
-          <div class="ui input"><input placeholder="Search..." type="text"><div class="results"></div></div>
+          <div class="ui input"><input placeholder="Search..." type="text" v-model="query"></div>
+          <div id="results"></div>
         </div>
         <div class="ui dropdown item" v-for="(cat, index) in category.Categories" :key="index" v-dropdown>
           {{cat.Title}}
@@ -169,7 +170,9 @@ export default {
       totalDuration: '00:00:00',
       errors: [],
       message: '',
-      messageBody: ''
+      messageBody: '',
+      query: '',
+      searchResults: ''
     }
   },
 
@@ -291,18 +294,40 @@ export default {
     },
     trackDuration: function (dur) {
       this.updateTime(dur)
+    },
+    query: function (que) {
+      var options = {
+        keys: ['Title'],
+        shouldSort: true,
+        maxPatternLength: 32,
+        minMatchCharLength: 3,
+      }
+      this.$search(que, this.searchSource, options).then(results => {
+        this.searchResults = results
+      })
     }
   },
 
   computed: {
     download: function () {
-        return this.current.toString().toLowerCase()
-        .replace(/\s+/g, '-')           // Replace spaces with -
-        .replace(/[^\w-]+/g, '')        // Remove all non-word chars
-        .replace(/--+/g, '-')           // Replace multiple - with single -
-        .replace(/^-+/, '')             // Trim - from start of text
-        .replace(/-+$/, '')             // Trim - from end of text
-        .concat('.mp3');                // Add mp3 to the end
+      return this.current.toString().toLowerCase()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/[^\w-]+/g, '')        // Remove all non-word chars
+      .replace(/--+/g, '-')           // Replace multiple - with single -
+      .replace(/^-+/, '')             // Trim - from start of text
+      .replace(/-+$/, '')             // Trim - from end of text
+      .concat('.mp3');                // Add mp3 to the end
+    },
+    searchSource: function () {
+      var src = []
+      this.category.Categories.forEach(function (cat) {
+        cat.Subcategories.forEach(function (crs) {
+          crs.Courses.forEach(function (obj) {
+            src.push(obj)
+          })
+        })
+      })
+      return src
     }
   }
 }

@@ -4,8 +4,10 @@ import 'semantic-ui-css/semantic.min.css'
 import 'semantic-ui-css/semantic.min.js'
 import 'vue-resize/dist/vue-resize.css'
 import VueResize from 'vue-resize'
+import VueFuse from 'vue-fuse'
 
 Vue.use(VueResize)
+Vue.use(VueFuse)
 
 window.jQuery = require('jquery')
 
