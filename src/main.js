@@ -9,7 +9,7 @@ import VueFuse from 'vue-fuse'
 Vue.use(VueResize)
 Vue.use(VueFuse)
 
-window.jQuery = require('jquery')
+// window.jQuery = require('jquery')
 
 Vue.directive('dropdown', {
   bind(el) {
