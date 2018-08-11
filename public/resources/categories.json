@@ -4,6 +4,30 @@
             "Title" : "Qur'an",
             "Subcategories": [
                 {
+                    "Title": "Recitation",
+                    "Category": 0,
+                    "Courses": [
+               
+                    ]
+                },
+                {
+                    "Title": "Tajweed",
+                    "Category": 0,
+                    "Courses": [
+                  
+                    ]
+                },
+                {
+                    "Title": "Hifz",
+                    "Category": 0,
+                    "Courses": [
+                        {
+                            "Title": "Hifz - by Asma Huda",
+                            "Keyword": "HIFZ-BH"
+                        }
+                    ]
+                },
+                {
                     "Title": "Tafsir",
                     "Category": 0,
                     "Courses": [
@@ -18,16 +42,108 @@
                     ]
                 },
                 {
-                    "Title": "Hifz",
+                    "Title": "Tadabbur al-Qur’an",
                     "Category": 0,
                     "Courses": [
-                        {
-                            "Title": "Hifz - by Asma Huda",
-                            "Keyword": "HIFZ-BH"
-                        }
+         
+                    ]
+                },
+                {
+                    "Title": "Uluum Al-Qur’an",
+                    "Category": 0,
+                    "Courses": [
+         
+                    ]
+                },
+                {
+                    "Title": "Selected Surahs",
+                    "Category": 0,
+                    "Courses": [
+         
                     ]
                 }
-                
+            ]
+        },
+        {
+            "Title": "Hadith",
+            "Subcategories": [
+                {
+                    "Title": "Sahih Bukhari – With Text",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Arbain Nawawi – 40 Ahadith",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Riyadh al-Saliheen",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Rabbi Zidni ‘Ilma",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Qala Rasul Allah ﷺ",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Sadaqah o Khairat",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Husn e Akhlaq",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Ahadith e Sahiha",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Muntakhab Ahadith",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Hadith Ki Ahmiyat",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                },
+                {
+                    "Title": "Uluum Al Hadith",
+                    "Category": 1,
+                    "Courses": [
+                      
+                    ]
+                }
             ]
         },
         {
@@ -35,12 +151,291 @@
             "Subcategories": [
                 {
                     "Title": "Qabar Kay Teen Sawal",
-                    "Category": 1,
+                    "Category": 2,
                     "Courses": [
                         {
                             "Title": "Qabr Kay Teen Sawal",
                             "Keyword": "QabarKayTeenSawal"
                         }
+                    ]
+                },
+                {
+                    "Title": "Tum Kab Tawbah Karo Gay?",
+                    "Category": 2,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Al-‘Aqeedah al-Wasitiyyah",
+                    "Category": 2,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Al-Usul al-Thalathah",
+                    "Category": 2,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Qabr Kay Teen Sawal",
+                    "Category": 2,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Allah Kay Khubsurat Naam",
+                    "Category": 2,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Ta’alluq Billah",
+                    "Category": 2,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Islami Aqa’aid",
+                    "Category": 2,
+                    "Courses": [
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Seerah",
+            "Subcategories": [
+                {
+                    "Title": "Ta’aruf e Habib ﷺ",
+                    "Category": 3,
+                    "Courses": [
+            
+                    ]
+                },
+                {
+                    "Title": "Tajalliyaat e Nabuwwat",
+                    "Category": 3,
+                    "Courses": [
+            
+                    ]
+                },
+                {
+                    "Title": "Seerat e Sahabiyyaat",
+                    "Category": 3,
+                    "Courses": [
+            
+                    ]
+                },
+                {
+                    "Title": "Seerah – Assorted Topics",
+                    "Category": 3,
+                    "Courses": [
+            
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Fiqh",
+            "Subcategories": [
+                {
+                    "Title": "Sunnah",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                },
+                {
+                    "Title": "Taharah",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                },
+                {
+                    "Title": "Salah",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                },
+                {
+                    "Title": "Sawm",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                },
+                {
+                    "Title": "Zakah",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                },
+                {
+                    "Title": "Hajj",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                },
+                {
+                    "Title": "Nikah",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                },
+                {
+                    "Title": "Islam Mein Halal o Haram",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                },
+                {
+                    "Title": "Mera Jina Mera Marna",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                },
+                {
+                    "Title": "Usul e Fiqh",
+                    "Category": 4,
+                    "Courses": [
+                   
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Tarbiyyah o Tazkiyah",
+            "Subcategories": [
+                {
+                    "Title": "Zaban Ki Hifazat",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Fiqh al-Qulub",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Tibb al-Qulub",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Al-Wasaa’il al-Mufidah Li al-Hayat al-Saeedah",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Wasaya Umm e Hakimah",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Batuni Na Ban",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Dawa e Shaafi",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Minhaj Al Qasideen",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Makaa’id al-Shaitan",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Islam Aik Ta’aruf",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Deen e Insaniyyat",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Gunahon Ko Dho Dalnay Walay A’maal",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                },
+                {
+                    "Title": "Ruhul Bayan Course",
+                    "Category": 5,
+                    "Courses": [
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Learn Arabic",
+            "Subcategories": [
+                {
+                    "Title": "Arabic Grammar",
+                    "Category": 6,
+                    "Courses": [
+                    
+                    ]
+                },
+                {
+                    "Title": "Nusus Min Al Hadith",
+                    "Category": 6,
+                    "Courses": [
+                    
+                    ]
+                },
+                {
+                    "Title": "Qur'ani Khatt Ki Tarikh",
+                    "Category": 6,
+                    "Courses": [
+                    
                     ]
                 }
             ]

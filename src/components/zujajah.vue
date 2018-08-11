@@ -3,10 +3,14 @@
   <div class="ui two column grid">
     <div class="four wide column">
       <div class="ui vertical menu">
-        <div class="item" v-for="(cat, index) in category.Categories" :key="index">
-          <div class="header">{{cat.Title}}</div>
+        <div class="item">
+          <div class="ui input"><input placeholder="Search..." type="text"></div>
+        </div>
+        <div class="ui dropdown item" v-for="(cat, index) in category.Categories" :key="index" v-dropdown>
+          {{cat.Title}}
+          <i class="dropdown icon"></i>
           <div class="menu">
-            <a class="item" @click="active" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</a>
+            <a class="item" v-for="(subCat, index) in cat.Subcategories" :key="index" v-on:click="showCourses(subCat.Category, index)">{{subCat.Title}}</a>
           </div>
       </div>
       </div>
@@ -82,9 +86,9 @@
               </div>
             </div>
           </div>
-          <div class="item">
+          <!-- <div class="item">
             <div class="ui left pointing red label" v-show="courses.length == 0">Select a category from sidebar</div>
-          </div>
+          </div> -->
           <div class="ui right dropdown item" v-dropdown>
             <div class="text">More</div>
             <i class="dropdown icon"></i>
@@ -96,6 +100,7 @@
           </div>
         </div>
       </div>
+      <div class="row" v-show="message != 0"><div class="ui icon orange message"><i class="exclamation triangle icon"></i><div class="content"><div class="header">{{message}}</div><p>{{messageBody}}</p></div></div></div>
       <div class="row">
         <div v-if="course.length != 0" class="sixteen wide column" id="courseResource">
           <div class="ui accordion fluid styled" v-accordion>
@@ -162,7 +167,9 @@ export default {
       trackDuration: 0,
       currentDuration: '00:00:00',
       totalDuration: '00:00:00',
-      errors: []
+      errors: [],
+      message: '',
+      messageBody: ''
     }
   },
 
@@ -232,9 +239,16 @@ export default {
         })
     },
     showCourses: function (cat, ind) {
-      this.courses = this.category.Categories[cat].Subcategories[ind].Courses
-      this.selected = this.category.Categories[cat].Subcategories[ind].Title
-      $('.browse.item').popup('show')
+      if (this.category.Categories[cat].Subcategories[ind].Courses.length != 0) {
+        this.courses = this.category.Categories[cat].Subcategories[ind].Courses
+        this.selected = this.category.Categories[cat].Subcategories[ind].Title
+        $('.browse.item').popup('show')
+        this.message = ''
+        this.messageBody = ''
+      } else {
+        this.message = 'Sorry! There is no course entry yet'
+        this.messageBody = 'Please try another category'
+      }
     },
     refreshSticky: function () {
       $('.ui.sticky').sticky('refresh')
@@ -298,6 +312,10 @@ export default {
 <style scoped>
 footer a {
   color: #008c86;
+}
+
+.row {
+  margin-bottom: 1em;
 }
 
 audio {
